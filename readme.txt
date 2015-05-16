@@ -4,7 +4,7 @@ Donate link: http://crudlab.com
 Tags: image slider, image slides, photos slides, photos animation, slider animation, picture slides, picture box, image box, picture slides
 
 Requires at least: 3.8
-Tested up to: 4.1
+Tested up to: 4.2
 Stable tag: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -17,15 +17,15 @@ Image Gallery Box is a great tool for viewing photos and for creating photo slid
 
 = Features =
 
-*Fully responsive
-*Very easy and clean User Interface
-*Six Aesthetic design
-*Five Animation
-*Live Preview Inside Plugin
-*Ability to hide/dispaly title
-*ON/OFF Indication
-*Excellent Support
-*Very easy to Use 
+* Fully responsive;
+* Very easy and clean User Interface;
+* Six Aesthetic design;
+* Five Animation;
+* Live Preview Inside Plugin;
+* Ability to hide/dispaly title;
+* ON/OFF Indication;
+* Excellent Support;
+* Very easy to Use; 
 
 
 == Installation ==
@@ -72,6 +72,6 @@ To change image title, go to the media library, and click on image you wish to c
 == Changelog ==
 
 = 1.0 =
-* Rolled out plug-in (05-11-2015)
+* Rolled out plug-in (05-16-2015)
 
 
