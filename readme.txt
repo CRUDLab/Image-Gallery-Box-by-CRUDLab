@@ -71,6 +71,10 @@ To change image title, go to the media library, and click on image you wish to c
 
 == Changelog ==
 
+= 1.0.2 =
+
+* Fixed few bugs
+
 = 1.0 =
 * Rolled out plug-in (05-16-2015)
 

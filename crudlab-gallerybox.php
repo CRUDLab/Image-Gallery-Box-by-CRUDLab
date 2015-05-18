@@ -3,7 +3,7 @@
   Plugin Name: Image Gallery Box by CRUDLab
   Description: Image Gallery Box is a great tool for viewing photos and for creating photo slides. 
   Author: <a href="http://crudlab.com/">CRUDLab</a>
-  Version: 1.0.0
+  Version: 1.0.2
  */
 $CLIGBPath = plugin_dir_path(__FILE__);
 require_once $CLIGBPath . 'CLGBSettings.php';
@@ -94,8 +94,8 @@ class CLGalleryBox {
                 });
             </script>
             <?php
-            wp_register_script('cligb-cpopup', plugins_url('js/cpopup.js', __FILE__), array('jquery'));
-            wp_register_style('cligb-popupstyle', plugins_url('dist/css/popstyles.css', __FILE__), array(), '20120208', 'all');
+            wp_register_script('cligb-cpopup', plugins_url('js/cpopup.js', __FILE__), array('jquery'),'v0.0.2');
+            wp_register_style('cligb-popupstyle', plugins_url('dist/css/popstyles.css', __FILE__), array(), 'v0.0.2', 'all');
             wp_register_style('cligb-fontawsome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', array(), '20120208', 'all');
             wp_enqueue_script('cligb-cpopup');
             wp_enqueue_style('cligb-popupstyle');

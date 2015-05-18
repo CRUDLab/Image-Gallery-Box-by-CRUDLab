@@ -8,6 +8,7 @@
     <a class="control-icons crd-next" data-caction="next" href="javascript://">
         <i class="fa fa-arrow-circle-o-right"></i>
     </a>
+    
     <div class="imagecontainer">
         <img src="<?php echo plugins_url('../img/image3.jpg', __FILE__) ?>"/>
     </div>

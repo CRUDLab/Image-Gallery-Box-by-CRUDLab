@@ -1,5 +1,7 @@
 <div class="vlightbox-wrap boxed-arrows">
+    
     <div class="imagecontainer">
+       
         <img src="<?php echo plugins_url('../img/image3.jpg', __FILE__) ?>"/>
         <a class="crd-prev" data-caction="prev" href="javascript://">
             <i class="fa fa-chevron-left"></i>

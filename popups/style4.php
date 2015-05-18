@@ -1,4 +1,5 @@
 <div class="vlightbox-wrap photonoir">
+    
     <div class="controls pull-right">
         <a class="control-icons crd-prev" data-caction="prev" href="javascript://">
             <i class="fa fa-arrow-circle-o-left"></i>

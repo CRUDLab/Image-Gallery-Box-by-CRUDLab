@@ -1,4 +1,5 @@
 <div class="vlightbox-wrap">
+    
     <div class="imagecontainer">
         <img src="<?php echo plugins_url('../img/image3.jpg', __FILE__) ?>"/>
     </div>

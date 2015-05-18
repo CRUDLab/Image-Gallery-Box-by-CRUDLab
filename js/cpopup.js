@@ -12,6 +12,8 @@
         $('[data-caction="next"]').click(nextimage);
         $('[data-caction="prev"]').click(previmage);
         $('.c-popup-wrap').on('click', '.crdclose', close);
+        $('.c-popup-wrap .vlightbox-wrap').append('<div class="crd-ajax-loader"></div>');
+        $('.c-popup-wrap .imagecontainer img').attr('src', '');
         $(window).unload(function () {
             return "Bye now!";
         });
@@ -29,11 +31,16 @@
         }
 
         nextprev();
-        setTitle($(this));
-        var href = $(this).attr('href');
-        loadimage(href);
+        loadimage($(this));
         return false;
     };
+
+    var showLoader = function () {
+        $('.crd-ajax-loader').show();
+    }
+    var hideLoader = function () {
+        $('.crd-ajax-loader').hide();
+    }
 
     var nextprev = function () {
         var tt = $(imgList).length;
@@ -53,21 +60,17 @@
 
     var nextimage = function () {
         var elem = ($(imgList).get(cutI + 1));
-        var href = $(elem).attr('href');
         cutI = cutI + 1;
         nextprev();
-        setTitle(elem);
-        loadimage(href);
+        loadimage(elem);
         return false;
     }
 
     var previmage = function () {
         var elem = ($(imgList).get(cutI - 1));
-        var href = $(elem).attr('href');
         cutI = cutI - 1;
         nextprev();
-        setTitle(elem);
-        loadimage(href);
+        loadimage(elem);
         return false;
     };
 
@@ -85,12 +88,14 @@
         $('.c-popup-wrap .imagedata .title').text(text);
     };
 
-    var loadimage = function (href) {
+    var loadimage = function (elem) {
+        var href = $(elem).attr('href')
         var photo = new Image();
 
         $(photo)
                 .bind('error', function () {
                     debug('as');
+                    hideLoader();
                 })
                 .one('load', function () {
 
@@ -127,12 +132,34 @@
 
                         photo.style.width = photo.width + 'px';
                         photo.style.height = photo.height + 'px';
-                        prep(photo);
-                    }, 1);
-                });
 
+//                        setTimeout(function () {
+                        $('.crd-ajax-loader').hide(0, function () {
+                            prep(photo);
+                            setTitle(elem);
+                        });
+
+//                        hideLoader();
+
+//                        }, 1000)
+
+
+                    }, 1);
+
+
+                });
+        $('.c-popup-wrap .imagecontainer img').attr('src', '');
+        if (!cached(href)) {
+            showLoader();
+        }
         photo.src = href;
     };
+
+    function cached(url) {
+        var test = document.createElement("img");
+        test.src = url;
+        return test.complete || test.width + test.height > 0;
+    }
 
     function debug(obj) {
         if (window.console && window.console.log) {
@@ -141,6 +168,7 @@
     }
 
     var getScreenHeight = function () {
+        return getNewheight();
         return jQuery(window).height() - 100;
     }
 
@@ -150,7 +178,7 @@
 
     var getNewheight = function () {
         var h = jQuery(window).height();
-        return Math.round(h - (h / 100) * 20);
+        return Math.round(h - (h / 100) * 30);
     }
 
     var getNewwidth = function () {
@@ -186,7 +214,3 @@
         }
     };
 }(jQuery));
-
-
-
-

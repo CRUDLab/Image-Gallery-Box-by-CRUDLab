@@ -2,9 +2,9 @@
 
 .c-popup-wrap{
     position: absolute;
-    width: 102%;
+    width: 96%;
     z-index: 10000000;
-    left: -20px;
+    left: 2%;
     top: 0px;
     height: 100%;
 }
@@ -21,6 +21,10 @@
 .vlightbox-wrap .imagecontainer img{
     max-width: 100%;
     height: auto;
+    vertical-align: bottom;
+}
+.control-icons {
+    line-height: 45px;
 }
 .vlightbox-wrap .imagecontainer{
     
@@ -144,6 +148,8 @@
     height: 100%;
     position: fixed;
     width: 100%;
+    left:0;
+    top: 0;
 }
 /** lightbox photonoir **/
 
@@ -196,6 +202,15 @@
     position: absolute;
     top: 45%;
 }
+.crd-ajax-loader{
+    position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../../img/ajax-loader.gif") no-repeat 50% 50% rgba(0,0,0,0.5);
+  z-index: 1;
+  top:0;
+}
+
 .vlightbox-wrap.boxed-arrows .imagecontainer .crd-next {
     background: rgba(255,255,255,0.75);
     border-bottom-left-radius: 5px;

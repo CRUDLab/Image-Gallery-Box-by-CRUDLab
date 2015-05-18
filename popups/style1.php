@@ -2,7 +2,9 @@
     <a class="control-icons crdclose" href="javascript://">
         <i class="fa fa-times-circle-o"></i>
     </a>
+    
     <div class="imagecontainer">
+        
         <img src="<?php echo plugins_url('../img/image3.jpg', __FILE__) ?>"/>
         <div class="imagedata">
             <div class="title pull-left">
